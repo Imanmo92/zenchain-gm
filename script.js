@@ -1,6 +1,6 @@
 // ====== Config (replace with your real values) ======
 const CONTRACT_ADDRESS = "0x1234567890abcdef1234567890abcdef12345678";
-const FAUCET_URL = "https://example-zen-faucet.testnet/";
+const FAUCET_URL = "https://faucet.zenchain.io/";
 const contractAbi = [
   {
     "inputs": [],
@@ -289,3 +289,4 @@ window.addEventListener("load", async () => {
     log("Init read error:", err.message || err);
   }
 });
+
