@@ -1,4 +1,14 @@
 // ====== Config (replace with your real values) ======
+// صفحه‌بندی
+function showSection(id) {
+  document.querySelectorAll('.page').forEach(page => {
+    page.classList.remove('active');
+  });
+  document.getElementById(id).classList.add('active');
+}
+
+// بقیه کدهای اتصال ولت، فاست و قرارداد همون قبلی هست
+
 const CONTRACT_ADDRESS = "0x1234567890abcdef1234567890abcdef12345678";
 const FAUCET_URL = "https://faucet.zenchain.io/";
 const contractAbi = [
@@ -289,4 +299,5 @@ window.addEventListener("load", async () => {
     log("Init read error:", err.message || err);
   }
 });
+
 
