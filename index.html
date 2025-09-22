@@ -1,49 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ZenChain GM — Testnet</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- ethers.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/ethers/dist/ethers.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenChain GM dApp</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>ZenChain GM (Testnet)</h1>
-
-    <div class="row">
-      <button id="connectBtn">Connect Wallet</button>
-      <span id="accountDisplay" class="muted">Not connected</span>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="logo.png" alt="ZenChain Logo">
+      <h2>ZenChain</h2>
     </div>
+    <nav>
+      <button onclick="showSection('home')">🏠 Home</button>
+      <button onclick="showSection('faucet')">💧 Faucet</button>
+      <button onclick="showSection('gm')">🌅 GM</button>
+      <button onclick="showSection('swap')">🔄 Swap</button>
+      <button onclick="showSection('bridge')">🌉 Bridge</button>
+    </nav>
+  </aside>
 
-    <div class="row">
-      <button id="faucetBtn">Get Test Tokens (Faucet)</button>
-      <span id="faucetInfo" class="muted">Replace with your faucet URL</span>
-    </div>
+  <!-- Main Content -->
+  <main class="content">
+    <section id="home" class="page active">
+      <h1>Welcome to ZenChain GM dApp</h1>
+      <button id="connectButton">Connect Wallet</button>
+    </section>
 
-    <div class="row">
-      <button id="sendGmBtn">Send "GM"</button>
-      <div id="cooldownInfo" class="muted">Status: Ready</div>
-      <div id="timer" class="muted"></div>
-    </div>
+    <section id="faucet" class="page">
+      <h1>Testnet Faucet</h1>
+      <button id="faucetButton">Get Test Tokens</button>
+    </section>
 
-    <div class="card">
-      <h3>Total GM Count</h3>
-      <div id="totalGms">—</div>
-    </div>
+    <section id="gm" class="page">
+      <h1>Say GM</h1>
+      <button id="gmButton">Send GM</button>
+      <p id="cooldownTimer"></p>
+      <p>Total GMs: <span id="totalGMs">0</span></p>
+      <ul id="gmList"></ul>
+    </section>
 
-    <div class="card">
-      <h3>Latest GMs</h3>
-      <ul id="recentList"></ul>
-    </div>
+    <section id="swap" class="page">
+      <h1>Swap</h1>
+      <p>Coming soon... 🔄</p>
+    </section>
 
-    <div class="card">
-      <h3>Log</h3>
-      <pre id="logArea"></pre>
-    </div>
-  </div>
+    <section id="bridge" class="page">
+      <h1>Bridge</h1>
+      <p>Coming soon... 🌉</p>
+    </section>
+  </main>
 
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
