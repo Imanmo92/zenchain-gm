@@ -3,55 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZenChain Dashboard</title>
+  <title>ZenChain dApp</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="logo">
-        <img src="zenchain-logo.png" alt="ZenChain Logo">
-      </div>
-      <button onclick="showPage('swap')">Swap</button>
-      <button onclick="showPage('liquidity')">Liquidity</button>
-      <button onclick="showPage('staking')">Staking</button>
-      <button onclick="showPage('gm')">GM</button>
-      <button onclick="showPage('bridge')">Bridge</button>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="./logo.png" alt="ZenChain Logo">
+      <h2>ZenChain</h2>
+    </div>
+    <nav>
+      <button onclick="showPage('home')">🏠 Home</button>
+      <button onclick="showPage('swap')">🔄 Swap</button>
+      <button onclick="showPage('liquidity')">💧 Liquidity</button>
+      <button onclick="showPage('staking')">📈 Staking</button>
+      <button onclick="showPage('gm')">🌅 GM</button>
+      <button onclick="showPage('bridge')">🌉 Bridge</button>
+    </nav>
+  </aside>
 
-      <button id="connectWalletBtn" class="wallet-btn">Connect Wallet</button>
-    </aside>
+  <!-- Main Content -->
+  <main class="content">
+    <section id="home" class="page active">
+      <h1>Welcome to ZenChain dApp</h1>
+      <button id="connectWalletBtn">Connect Wallet</button>
+    </section>
 
-    <!-- Main Content -->
-    <main class="content">
-      <section id="swap" class="page active">
-        <h1>Swap</h1>
-        <p>Swap tokens easily on ZenChain.</p>
-      </section>
+    <section id="swap" class="page">
+      <h1>Swap</h1>
+      <p>Coming soon...</p>
+    </section>
 
-      <section id="liquidity" class="page">
-        <h1>Liquidity</h1>
-        <p>Add or remove liquidity from pools.</p>
-      </section>
+    <section id="liquidity" class="page">
+      <h1>Liquidity</h1>
+      <p>Provide liquidity and earn rewards.</p>
+    </section>
 
-      <section id="staking" class="page">
-        <h1>Staking</h1>
-        <p>Stake your tokens and earn rewards.</p>
-      </section>
+    <section id="staking" class="page">
+      <h1>Staking</h1>
+      <p>Stake ZTC and earn rewards. (Demo)</p>
+    </section>
 
-      <section id="gm" class="page">
-        <h1>GM</h1>
-        <p>Send a GM to the community!</p>
-        <button id="sendGmBtn">Say GM</button>
-        <p id="gmCount">GM Count: 0</p>
-      </section>
+    <section id="gm" class="page">
+      <h1>Say GM</h1>
+      <button id="sendGmBtn">Send GM</button>
+      <p>Total GMs: <span id="totalGms">0</span></p>
+    </section>
 
-      <section id="bridge" class="page">
-        <h1>Bridge</h1>
-        <p>Bridge tokens between networks.</p>
-      </section>
-    </main>
-  </div>
+    <section id="bridge" class="page">
+      <h1>Bridge</h1>
+      <p>Coming soon...</p>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
