@@ -1,90 +1,93 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f8f9fa;
-  color: #222;
+  background: #0e0e1a;
+  color: white;
   display: flex;
-  height: 100vh;
 }
 
-/* Sidebar */
+/* --- Sidebar --- */
 .sidebar {
-  width: 240px;
-  background: #ffffff;
-  border-right: 1px solid #ddd;
+  width: 220px;
+  background: linear-gradient(180deg, #00ff88, #00ffff);
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 20px 10px;
-}
-
-.sidebar .logo {
-  text-align: center;
-  margin-bottom: 20px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+  min-height: 100vh;
 }
 
 .sidebar .logo img {
-  width: 60px;
-  margin-bottom: 5px;
+  width: 80px;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.7));
 }
 
-.sidebar nav {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.sidebar h2 {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  color: black;
 }
 
 .sidebar nav button {
-  background: none;
-  border: none;
-  text-align: left;
+  display: block;
+  width: 90%;
+  margin: 8px 0;
   padding: 10px;
-  font-size: 16px;
-  border-radius: 6px;
+  background: rgba(0,0,0,0.1);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: black;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.3s ease;
 }
 
 .sidebar nav button:hover {
-  background: rgba(0, 200, 100, 0.1);
+  background: rgba(255,255,255,0.3);
 }
 
-/* Main Content */
+/* --- Main Content --- */
 .content {
   flex: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  padding: 40px;
+  align-items: center;
+  padding: 30px;
 }
 
 .page {
   display: none;
   width: 100%;
-  max-width: 600px;
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+  max-width: 500px;
   text-align: center;
 }
 
 .page.active {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-.sidebar button {
-  color: black;   /* <--- This makes the menu text black */
-  background: transparent;
+.page h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+button {
+  background: #00ff88;
   border: none;
-  padding: 12px;
-  text-align: left;
-  width: 100%;
+  color: black;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 16px;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-  background: #00e07f;
+  background: #00ffaa;
 }
-
-
