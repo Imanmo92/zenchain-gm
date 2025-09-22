@@ -72,16 +72,19 @@ body {
   display: block;
 }
 
-button {
-  background: #00c86f;
-  color: black;
+.sidebar button {
+  color: black;   /* <--- This makes the menu text black */
+  background: transparent;
   border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
+  padding: 12px;
+  text-align: left;
+  width: 100%;
   cursor: pointer;
+  font-size: 16px;
 }
 
 button:hover {
   background: #00e07f;
 }
+
 
