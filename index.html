@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ZenChain GM — Testnet</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- ethers.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers/dist/ethers.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>ZenChain GM (Testnet)</h1>
+
+    <div class="row">
+      <button id="connectBtn">Connect Wallet</button>
+      <span id="accountDisplay" class="muted">Not connected</span>
+    </div>
+
+    <div class="row">
+      <button id="faucetBtn">Get Test Tokens (Faucet)</button>
+      <span id="faucetInfo" class="muted">Replace with your faucet URL</span>
+    </div>
+
+    <div class="row">
+      <button id="sendGmBtn">Send "GM"</button>
+      <div id="cooldownInfo" class="muted">Status: Ready</div>
+      <div id="timer" class="muted"></div>
+    </div>
+
+    <div class="card">
+      <h3>Total GM Count</h3>
+      <div id="totalGms">—</div>
+    </div>
+
+    <div class="card">
+      <h3>Latest GMs</h3>
+      <ul id="recentList"></ul>
+    </div>
+
+    <div class="card">
+      <h3>Log</h3>
+      <pre id="logArea"></pre>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
