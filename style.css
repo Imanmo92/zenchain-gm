@@ -1,11 +1,12 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #1e1e1e;
+  background: #0e0e1a;
   color: white;
   display: flex;
 }
 
+/* --- Sidebar --- */
 .sidebar {
   width: 220px;
   background: linear-gradient(180deg, #00ff88, #00ffff);
@@ -14,6 +15,7 @@ body {
   align-items: center;
   padding: 20px 10px;
   box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+  min-height: 100vh;
 }
 
 .sidebar .logo img {
@@ -29,8 +31,8 @@ body {
 
 .sidebar nav button {
   display: block;
-  width: 100%;
-  margin: 10px 0;
+  width: 90%;
+  margin: 8px 0;
   padding: 10px;
   background: rgba(0,0,0,0.1);
   border: none;
@@ -45,17 +47,34 @@ body {
   background: rgba(255,255,255,0.3);
 }
 
+/* --- Main Content --- */
 .content {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 30px;
 }
 
 .page {
   display: none;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
 }
 
 .page.active {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.page h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 button {
