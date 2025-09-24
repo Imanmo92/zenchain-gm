@@ -57,3 +57,18 @@ body {
 .page.active {
   display: block;
 }
+
+button {
+  background: #00ff88;
+  border: none;
+  color: black;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #00ffaa;
+}
