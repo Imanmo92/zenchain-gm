@@ -1,6 +1,6 @@
 // --- Config ---
 const CONTRACT_ADDRESS = "0x1234567890abcdef1234567890abcdef12345678";
-const FAUCET_URL = "https://faucet.zenchain.xyz"; // Change to real faucet if needed
+const FAUCET_URL = "https://faucet.zenchain.io"; // Change to real faucet if needed
 
 const contractAbi = [
   {
@@ -103,3 +103,4 @@ async function loadTotalGMs() {
   const total = await contract.getTotalGMs();
   document.getElementById("totalGMs").innerText = total.toString();
 }
+
